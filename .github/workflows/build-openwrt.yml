@@ -66,7 +66,9 @@ jobs:
         ln -s /mnt/openwrt/dl openwrt/dl
         ln -s /mnt/openwrt/staging_dir openwrt/staging_dir
     - name: Update feeds
-      run: cd openwrt && ./scripts/feeds update -a
+      run: |
+        sed -i 's/\"#src-git\"/\"src-git\"/g' ./openwrt/scripts/feeds.conf.default
+        cd openwrt && ./scripts/feeds update -a
 
     - name: Install feeds
       run: cd openwrt && ./scripts/feeds install -a
