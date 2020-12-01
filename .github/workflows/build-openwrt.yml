@@ -35,6 +35,7 @@ env:
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: false
   UPLOAD_WETRANSFER: false
+  ACTIONS_ALLOW_UNSECURE_COMMANDS: true
   TZ: Asia/Shanghai
 
 jobs:
