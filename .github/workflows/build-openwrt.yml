@@ -78,6 +78,8 @@ jobs:
     - name: Install feeds
       run: |
         cd openwrt && ./scripts/feeds install -a
+        rm -rf feeds/luci/applications/luci-app-turboacc
+        git clone https://github.com/AutoCONFIG/luci-app-turboacc.git feeds/luci/applications/luci-app-turboacc
         
 
     - name: Load custom configuration
