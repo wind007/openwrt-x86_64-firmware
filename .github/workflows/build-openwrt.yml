@@ -70,8 +70,9 @@ jobs:
         $GITHUB_WORKSPACE/$DIY_P1_SH
     - name: Update feeds
       run: |	      
-        cd openwrt && sed -i 's/#src-git/src-git/g' ./feeds.conf.default
-        # echo 'src-git helloworld https://github.com/fw876/helloworld' >> ./feeds.conf.default
+        cd openwrt 
+        # && sed -i 's/#src-git/src-git/g' ./feeds.conf.default
+        echo 'src-git helloworld https://github.com/fw876/helloworld' >> ./feeds.conf.default
         ./scripts/feeds update -a
 
     - name: Install feeds
