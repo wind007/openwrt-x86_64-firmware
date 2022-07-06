@@ -78,6 +78,7 @@ jobs:
     - name: Install feeds
       run: |
         cd openwrt && ./scripts/feeds install -a
+        ## turboacc 有问题，先换掉，后面又更新 再注释掉代码
         rm -rf feeds/luci/applications/luci-app-turboacc
         git clone https://github.com/AutoCONFIG/luci-app-turboacc.git feeds/luci/applications/luci-app-turboacc
         
