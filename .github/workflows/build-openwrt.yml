@@ -82,8 +82,8 @@ jobs:
         rm -rf feeds/luci/applications/luci-app-turboacc
         git clone https://github.com/AutoCONFIG/luci-app-turboacc.git feeds/luci/applications/luci-app-turboacc
         # 引入docker https://gitee.com/wangfuying_admin/Docker-For-OpenWRT#https://gitee.com/link?target=https%3A%2F%2Fgitlab.com%2Fmcbridematt%2Fopenwrt-container-feed%2Ftree%2Fmaster
-        # cd package
-        git clone https://gitee.com/wangfuying_admin/Docker-For-OpenWRT.git packages/docker
+        cd package
+        git clone https://gitee.com/wangfuying_admin/Docker-For-OpenWRT.git docker
         
 
     - name: Load custom configuration
